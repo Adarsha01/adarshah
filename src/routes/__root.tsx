@@ -90,6 +90,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Adarsha H" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Adarsha H | Software Engineer | React Developer" },
+      { name: "twitter:title", content: "Adarsha H | Software Engineer | React Developer" },
+      { name: "description", content: "A premium, modern developer portfolio showcasing Adarsha H's software engineering and React expertise." },
+      { property: "og:description", content: "A premium, modern developer portfolio showcasing Adarsha H's software engineering and React expertise." },
+      { name: "twitter:description", content: "A premium, modern developer portfolio showcasing Adarsha H's software engineering and React expertise." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5e851586-bda5-414f-a62e-15c86962b386/id-preview-085f370c--bb4ec039-977f-4ce4-980b-4d03576a8e7c.lovable.app-1782495298989.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5e851586-bda5-414f-a62e-15c86962b386/id-preview-085f370c--bb4ec039-977f-4ce4-980b-4d03576a8e7c.lovable.app-1782495298989.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
