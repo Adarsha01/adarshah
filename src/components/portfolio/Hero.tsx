@@ -180,7 +180,7 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="absolute -bottom-6 -left-6 glass-strong rounded-2xl px-4 py-3 shadow-card hidden sm:block"
           >
-            <p className="font-display font-bold text-2xl text-gradient-blue">7+</p>
+            <p className="font-display font-bold text-2xl text-gradient-blue"><CountUp to={7} suffix="+" /></p>
             <p className="text-xs text-muted-foreground">Projects Built</p>
           </motion.div>
           <motion.div
