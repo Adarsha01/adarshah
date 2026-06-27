@@ -92,6 +92,8 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-2 pl-2">
             <a
               href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               download
               className="inline-flex items-center gap-2 rounded-full border border-border-strong px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/5 transition-all"
             >
@@ -167,6 +169,8 @@ export function Navbar() {
               <div className="mt-auto flex flex-col gap-3">
                 <a
                   href="/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   download
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border-strong px-5 py-3 font-medium"
                 >

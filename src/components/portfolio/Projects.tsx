@@ -13,6 +13,7 @@ type Project = {
   title: string;
   tags: string[];
   description: string;
+  problem?: string;
   features: string[];
   tech: string[];
   image: string;
@@ -20,12 +21,16 @@ type Project = {
   demo?: string;
 };
 
+const GH = "https://github.com/Adarsha01";
+
 const FEATURED: Project[] = [
   {
     title: "AI Proctor",
     tags: ["AI", "Computer Vision", "Education"],
     description:
       "An AI-powered online examination monitoring system designed to improve exam integrity through automated behavior detection using computer vision.",
+    problem:
+      "Online exams lack reliable supervision, making cheating easy and unfair to honest students.",
     features: [
       "Detect suspicious activity",
       "Monitor candidate behavior",
@@ -34,13 +39,15 @@ const FEATURED: Project[] = [
     ],
     tech: ["Python", "HTML", "CSS", "SQL"],
     image: aiProctor,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/AI-Proctor`,
   },
   {
     title: "Quizentra",
     tags: ["React", "Education", "AI"],
     description:
       "An AI-assisted learning platform where students access quizzes, improve knowledge, and track progress through an engaging, responsive interface.",
+    problem:
+      "Students need an engaging way to self-assess and track learning progress beyond static materials.",
     features: [
       "Quiz Management",
       "Score Tracking",
@@ -50,13 +57,15 @@ const FEATURED: Project[] = [
     ],
     tech: ["React", "JavaScript", "HTML", "CSS"],
     image: quizentra,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Quizentra`,
   },
   {
     title: "Property Price Prediction",
     tags: ["Machine Learning", "Python", "Analytics"],
     description:
       "Machine learning application that predicts property prices using historical housing data with preprocessing, feature engineering, and model optimization.",
+    problem:
+      "Buyers and sellers struggle to estimate fair market value without data-driven insights.",
     features: [
       "Prediction Model",
       "Data Cleaning",
@@ -65,17 +74,19 @@ const FEATURED: Project[] = [
     ],
     tech: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
     image: property,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Property-Price-Prediction`,
   },
   {
     title: "Student Result Checker",
     tags: ["React", "Education"],
     description:
       "Responsive web application for displaying and managing student examination results with fast search and a clean user experience.",
+    problem:
+      "Manual result distribution is slow and frustrating for students checking outcomes.",
     features: ["Result Search", "Responsive UI", "Fast Retrieval", "Simple Dashboard"],
     tech: ["React", "JavaScript", "HTML", "CSS"],
     image: results,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Student-Result-Checker`,
   },
 ];
 
@@ -87,7 +98,7 @@ const OTHERS: Project[] = [
     features: ["Movie Search", "Dynamic Cards", "Loading Animation", "Responsive Design"],
     tech: ["React", "OMDb API"],
     image: movies,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Movie-Listing-App`,
   },
   {
     title: "Weather Forecast App",
@@ -96,7 +107,7 @@ const OTHERS: Project[] = [
     features: ["Live Weather", "City Search", "Responsive Interface", "Error Handling"],
     tech: ["React", "OpenWeather"],
     image: weather,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Weather-Forecast-App`,
   },
   {
     title: "Tourism Management System",
@@ -105,7 +116,7 @@ const OTHERS: Project[] = [
     features: ["Tour Booking", "Database Management", "User-Friendly Interface"],
     tech: ["Python", "HTML", "CSS", "SQL"],
     image: tourism,
-    github: "https://github.com/Adarsha01",
+    github: `${GH}/Tourism-Management-System`,
   },
 ];
 
@@ -162,6 +173,16 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
         <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
           {project.description}
         </p>
+        {project.problem && (
+          <div className="mt-5 rounded-2xl border border-border bg-white/[0.02] p-4">
+            <p className="text-[11px] uppercase tracking-widest text-accent">
+              Problem solved
+            </p>
+            <p className="mt-1.5 text-sm text-white/80 leading-relaxed">
+              {project.problem}
+            </p>
+          </div>
+        )}
         <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2">
           {project.features.map((f) => (
             <li key={f} className="flex items-center gap-2 text-sm text-white/80">
@@ -192,7 +213,7 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
               GitHub
             </a>
           )}
-          {project.demo ? (
+          {project.demo && (
             <a
               href={project.demo}
               target="_blank"
@@ -202,14 +223,6 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
               Live Demo
               <ArrowUpRight className="w-4 h-4" />
             </a>
-          ) : (
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow hover:-translate-y-0.5 transition-all"
-            >
-              Learn More
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
           )}
         </div>
       </div>

@@ -106,16 +106,10 @@ export function Education() {
                     {c.title}
                   </h3>
                   <p className="text-sm text-muted-foreground mt-1">{c.issuer}</p>
-                  <div className="mt-5 pt-5 border-t border-border flex items-center justify-between">
+                  <div className="mt-5 pt-5 border-t border-border">
                     <span className="text-[11px] uppercase tracking-widest text-muted-foreground">
                       ID · {c.credential}
                     </span>
-                    <button
-                      type="button"
-                      className="text-xs font-medium text-accent hover:text-white transition-colors"
-                    >
-                      Verify →
-                    </button>
                   </div>
                 </div>
               </StaggerItem>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Download, Github, Linkedin, Mouse } from "lucide-react";
 import { useEffect, useState } from "react";
 import portrait from "@/assets/adarsha-portrait.jpg";
+import { CountUp } from "./CountUp";
 
 const ROLES = [
   "Software Engineer",
@@ -91,9 +92,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="mt-8 max-w-xl text-base sm:text-lg text-muted-foreground leading-relaxed"
           >
-            I build modern web applications with React, JavaScript and AI-powered
-            solutions. Passionate about crafting intuitive user experiences, solving
-            real-world problems, and continuously learning new technologies.
+            I build modern web applications using React, JavaScript, Python, and
+            AI-driven solutions. Passionate about solving real-world problems
+            through clean design, scalable code, and continuous learning.
           </motion.p>
 
           <motion.div
@@ -111,6 +112,8 @@ export function Hero() {
             </a>
             <a
               href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
               download
               className="inline-flex items-center gap-2 rounded-full glass border border-border-strong px-6 py-3 font-medium hover:bg-white/5 transition-all hover:-translate-y-0.5"
             >
@@ -177,7 +180,7 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="absolute -bottom-6 -left-6 glass-strong rounded-2xl px-4 py-3 shadow-card hidden sm:block"
           >
-            <p className="font-display font-bold text-2xl text-gradient-blue">7+</p>
+            <p className="font-display font-bold text-2xl text-gradient-blue"><CountUp to={7} suffix="+" /></p>
             <p className="text-xs text-muted-foreground">Projects Built</p>
           </motion.div>
           <motion.div
@@ -196,13 +199,13 @@ export function Hero() {
       <div className="absolute left-0 right-0 -bottom-2 hidden lg:block">
         <div className="mx-auto max-w-[1280px] grid grid-cols-4 gap-px overflow-hidden rounded-2xl glass border border-border-strong mx-6">
           {[
-            { k: "7+", v: "Projects" },
-            { k: "React", v: "Developer" },
-            { k: "MCA", v: "Graduate" },
-            { k: "Open", v: "To Work" },
+            { node: <CountUp to={7} suffix="+" />, v: "Projects" },
+            { node: "React", v: "Developer" },
+            { node: "MCA", v: "Graduate" },
+            { node: "Open", v: "To Work" },
           ].map((s) => (
             <div key={s.v} className="px-6 py-5 bg-background/40">
-              <p className="font-display font-bold text-xl text-white">{s.k}</p>
+              <p className="font-display font-bold text-xl text-white">{s.node}</p>
               <p className="text-xs text-muted-foreground mt-0.5">{s.v}</p>
             </div>
           ))}
