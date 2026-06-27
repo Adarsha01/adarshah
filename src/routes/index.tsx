@@ -9,6 +9,8 @@ import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
 import { Projects } from "@/components/portfolio/Projects";
 import { Education } from "@/components/portfolio/Education";
+import { CurrentlyLearning } from "@/components/portfolio/CurrentlyLearning";
+import { GithubActivity } from "@/components/portfolio/GithubActivity";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 

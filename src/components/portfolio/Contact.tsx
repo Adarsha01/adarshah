@@ -207,6 +207,8 @@ export function Contact() {
               <div className="mt-10 flex flex-wrap justify-center gap-3">
                 <a
                   href="/resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   download
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-6 py-3 font-semibold text-white shadow-glow hover:-translate-y-0.5 transition-all"
                 >
