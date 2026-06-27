@@ -206,7 +206,7 @@ export function Contact() {
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-3">
                 <a
-                  href="/resume.pdf"
+                  href="/Adarsha_H_Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   download

@@ -111,7 +111,7 @@ export function Hero() {
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="/resume.pdf"
+              href="/Adarsha_H_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               download

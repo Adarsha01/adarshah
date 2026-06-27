@@ -91,7 +91,7 @@ export function Navbar() {
           </ul>
           <div className="hidden md:flex items-center gap-2 pl-2">
             <a
-              href="/resume.pdf"
+              href="/Adarsha_H_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               download
@@ -168,7 +168,7 @@ export function Navbar() {
               </ul>
               <div className="mt-auto flex flex-col gap-3">
                 <a
-                  href="/resume.pdf"
+                  href="/Adarsha_H_Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   download
