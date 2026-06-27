@@ -80,6 +80,8 @@ function Portfolio() {
         <Skills />
         <Projects />
         <Education />
+        <CurrentlyLearning />
+        <GithubActivity />
         <Contact />
       </main>
       <Footer />
