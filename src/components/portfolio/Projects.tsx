@@ -173,6 +173,16 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
         <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
           {project.description}
         </p>
+        {project.problem && (
+          <div className="mt-5 rounded-2xl border border-border bg-white/[0.02] p-4">
+            <p className="text-[11px] uppercase tracking-widest text-accent">
+              Problem solved
+            </p>
+            <p className="mt-1.5 text-sm text-white/80 leading-relaxed">
+              {project.problem}
+            </p>
+          </div>
+        )}
         <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2">
           {project.features.map((f) => (
             <li key={f} className="flex items-center gap-2 text-sm text-white/80">
@@ -203,7 +213,7 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
               GitHub
             </a>
           )}
-          {project.demo ? (
+          {project.demo && (
             <a
               href={project.demo}
               target="_blank"
@@ -213,14 +223,6 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
               Live Demo
               <ArrowUpRight className="w-4 h-4" />
             </a>
-          ) : (
-            <button
-              type="button"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow hover:-translate-y-0.5 transition-all"
-            >
-              Learn More
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
           )}
         </div>
       </div>
